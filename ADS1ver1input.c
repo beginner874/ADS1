@@ -10,20 +10,21 @@ int main() {
     scanf("%d", &n);
     char insieme[n];
     char elem;
-    for (int i = 0; i < n; i++) {
+    for (int i=0;i<n;i++) {
         printf("inserisci elemento (solo singolo carattere alfanumerico) %d: ", i + 1);
         scanf(" %c", &elem); 
-        bool gia_presente = false;
-        for (int j = 0; j < card; j++) {
-            if (insieme[j] == elem) {
-                gia_presente = true;
+        bool gia_presente=false;
+        for (int j=0;j<card;j++) {
+            if (insieme[j]==elem) {
+                gia_presente=true;
                 break;
             }
         }
         if (!gia_presente) {
-            insieme[card] = elem;
+            insieme[card]=elem;
             card++;
-        } else {
+        } 
+        else {
             printf("l'elemento è già presente nell'insieme\n");
         }
     }

@@ -8,14 +8,19 @@ int main() {
     array[0]=1;
     for (int i=1;i<=card;i++) {
         array[i]=0;
+        printf("%d ",array[i-1]);
     }
+    printf("\n");
     for (int i=card;i>1;i--) {
         for (int k=card;k>1;k--) {
             array[k-1]=array[k-1]*k+array[k-2];
         }
+        for (int j=0;j<card;j++) {
+                printf("%d ",array[j]);
+            }
+        printf("\n");
     }
     for (int i=0;i<card;i++) {
-        printf("%d ",array[i]);
         numeroB=numeroB+array[i];
     }
     printf("\n");
